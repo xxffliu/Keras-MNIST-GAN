@@ -97,10 +97,10 @@ def saveModels(epoch):
     discriminator.save('models/gan_discriminator_epoch_%d.h5' % epoch)
 
 def train(epochs=1, batchSize=128):
-    batchCount = X_train.shape[0] / batchSize
-    print 'Epochs:', epochs
-    print 'Batch size:', batchSize
-    print 'Batches per epoch:', batchCount
+    batchCount = X_train.shape[0] // batchSize
+    print('Epochs:', epochs)
+    print('Batch size:', batchSize)
+    print('Batches per epoch:', batchCount)
 
     for e in xrange(1, epochs+1):
         print '-'*15, 'Epoch %d' % e, '-'*15
